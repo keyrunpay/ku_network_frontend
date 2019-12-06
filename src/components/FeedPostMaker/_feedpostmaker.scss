@@ -1,0 +1,138 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.feed-post-maker {
+  & > .flex {
+    cursor: pointer;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0px 0px 3px 2px #dce3ed;
+    border-radius: 6px;
+    padding: 10px 25px;
+    &:hover {
+      background: #f3f6f8;
+      color: #2b4a91;
+    }
+  }
+  .img {
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+    }
+  }
+  .text {
+    p {
+      padding-left: 15px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+  }
+  .post-maker-right {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .feed-post-maker-editor {
+    .feed-post-editor-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 100;
+      animation: fadeIn 0.2s ease-out;
+    }
+    .feed-post-editor-content {
+      animation: fadeIn 0.2s ease-out;
+      position: relative;
+      z-index: 105;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0px 0px 3px 2px #dce3ed;
+      border-radius: 6px;
+      padding: 10px 25px;
+
+      .top {
+        .img {
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+        }
+        .text-field {
+          margin-top: 30px;
+          margin-left: 5px;
+          flex: 1;
+
+          .text-top {
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 3px 2px #dce3ed;
+            border-radius: 0 10px 10px 10px;
+          }
+          textarea {
+            border: 0;
+            width: 100%;
+            min-height: 100px;
+          }
+        }
+      }
+
+      .left {
+        svg {
+          width: 22px;
+          height: 22px;
+          cursor: pointer;
+          &:hover {
+            color: #2b4a91;
+          }
+        }
+      }
+    }
+  }
+}
+
+.file-item-preview {
+  position: relative;
+  margin-right: 20px;
+
+  .close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+}
+
+.post-attachments {
+  padding: 10px 0;
+  margin-bottom: 20px;
+  header {
+    h1 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+  }
+}
